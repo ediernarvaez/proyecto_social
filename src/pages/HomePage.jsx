@@ -1,11 +1,13 @@
 import React from 'react';
 import Button from '../components/buttons/Button';
+import DarkModeSwitch from '../components/DarkMode/DarkModeSwitch';
 import FormImg from '../components/forms/FormImg';
 
 function HomePage() {
   return (
     <div>
       HomePage
+      <DarkModeSwitch />
       <Button
         className="bg-slate-800 p-2 text-white"
         type="button"

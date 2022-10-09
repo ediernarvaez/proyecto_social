@@ -5,7 +5,7 @@ import NotFoundPage from '../pages/NotFoundPage';
 
 function Base() {
   return (
-    <main>
+    <main className="bg-white dark:bg-zinc-800 h-screen">
       <Router>
         <Routes>
           {/* home */}
