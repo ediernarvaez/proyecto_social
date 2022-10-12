@@ -1,13 +1,10 @@
 import React from 'react';
 import Button from '../components/buttons/Button';
-import DarkModeSwitch from '../components/DarkMode/DarkModeSwitch';
 import FormImg from '../components/forms/FormImg';
 
 function HomePage() {
   return (
-    <div>
-      HomePage
-      <DarkModeSwitch />
+    <>
       <Button
         className="bg-slate-800 p-2 text-white"
         type="button"
@@ -17,12 +14,12 @@ function HomePage() {
         <FormImg
           htmlFor="file"
           className="flex items-center justify-center flex-row gap-2 bg-yellow-400 p-2 rounded-lg font-bold text-lg"
-          text="Subir imagen"
+          text="Subir Imagen"
           type="file"
           id="file"
         />
       </div>
-    </div>
+    </>
   );
 }
 
