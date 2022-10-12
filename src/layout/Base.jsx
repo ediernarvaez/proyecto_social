@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '../components/nav/Navbar';
 import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
+import FormPage from '../pages/FormPage';
 
 function Base() {
   return (
@@ -14,6 +15,8 @@ function Base() {
           <Route path="/" element={<HomePage />} />
           {/* not found */}
           <Route path="*" element={<NotFoundPage />} />
+          {/* formulario */}
+          <Route path="/formulario" element={<FormPage />} />
         </Routes>
       </Router>
     </main>
