@@ -8,8 +8,8 @@ import FormPage from '../pages/FormPage';
 function Base() {
   return (
     <main className="bg-white dark:bg-zinc-800 h-screen">
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           {/* home */}
           <Route path="/" element={<HomePage />} />
