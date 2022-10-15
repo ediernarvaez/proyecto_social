@@ -12,7 +12,13 @@ function FormImg(props) {
           <Image />
         </span>
         <span>{props.text}</span>
-        <input type={props.file} id={props.id} {...props} className="sr-only" />
+        <input
+          type={props.file}
+          id={props.id}
+          {...props}
+          accept="image/*"
+          className="sr-only"
+        />
       </label>
     </div>
   );

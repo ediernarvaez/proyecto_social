@@ -7,7 +7,7 @@ import FormPage from '../pages/FormPage';
 
 function Base() {
   return (
-    <main className="bg-white dark:bg-zinc-800 h-screen">
+    <main className="bg-white dark:bg-zinc-800 pb-28 h-full">
       <Router>
         <Navbar />
         <Routes>
