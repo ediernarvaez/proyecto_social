@@ -129,6 +129,37 @@ function Group() {
           </div>
         </div>
       </div>
+      <div className="grid grid-cols-6 gap-8 px-16 pt-10 ">
+        <div className="col-span-3 rounded-md bg-yellow-100 dark:bg-zinc-700 bg-dark-200 shadow-lg flex justify-center border">
+          <div className="grid grid-cols-2">
+            <div className="col-span-1 flex justify-start p-8 relative">
+              <span className="flex flex-col gap-7">
+                <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
+                  GRUPO QUINTO
+                </p>
+                <span className="flex justify-start">
+                  <Link to="/watchProjets">
+                    <button
+                      type="button"
+                      className="bg-sky-500 rounded-md px-10 py-2"
+                    >
+                      <h1 className="text-zinc-50 font-bold text-xs">
+                        Ver más
+                      </h1>
+                    </button>
+                  </Link>
+                </span>
+              </span>
+            </div>
+            <div className="col-span-1 flex justify-end">
+              <GroupIcon
+                alt="Libros hasta un 30% off"
+                className="rounded-r-md object-cover mt-5"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
