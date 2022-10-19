@@ -51,7 +51,7 @@ function FormPage() {
   return (
     <section className="mx-auto lg:mx-[500px] bg-zinc-900 mt-12 rounded-lg shadow-lg shadow-zinc-900/80 mb-12">
       <div className="px-20 py-8 grid grid-cols-2 gap-8">
-        <span className="underline pb-8 capitalize tracking-normal col-span-2 font-bold text-white text-3xl text-center">
+        <span className=" pb-8 capitalize tracking-normal col-span-2 font-bold text-white text-3xl text-center">
           Mi proyecto
         </span>
         <div className="col-span-1 flex flex-col gap-8 justify-center">

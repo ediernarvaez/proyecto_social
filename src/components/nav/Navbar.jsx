@@ -9,7 +9,7 @@ import Logout from '../assets/svg/logout';
 
 function Navbar() {
   return (
-    <section className="mx-auto px-56 py-4 dark:bg-zinc-900 bg-zinc-200">
+    <section className="mx-auto px-56 py-4 dark:bg-zinc-900 bg-yellow-100">
       <div className="container grid grid-cols-3">
         <div className="flex justify-start items-center col-span-1">
           <Link to="/">

@@ -4,6 +4,8 @@ import Navbar from '../components/nav/Navbar';
 import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
 import FormPage from '../pages/FormPage';
+import Footer from '../components/footer/Footer';
+import WatchProjets from '../pages/WatchProjets';
 
 function Base() {
   return (
@@ -17,7 +19,10 @@ function Base() {
           <Route path="*" element={<NotFoundPage />} />
           {/* formulario */}
           <Route path="/formulario" element={<FormPage />} />
+          {/* watch projects */}
+          <Route paht="/watchProjets" element={<WatchProjets />} />
         </Routes>
+        <Footer />
       </Router>
     </main>
   );
