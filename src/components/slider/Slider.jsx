@@ -3,10 +3,10 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import React from 'react';
+import img from '../assets/img/BANNER_PRADO_VX-1-1.jpg';
 
 function Slider() {
-  const img =
-    'https://www.thrustmaster.com/wp-content/uploads/2022/08/Promo-BackToSchool_1920x1080.jpg';
+  // const img = '../assets/img/BANNER_PRADO_VX-1-1.jpg';
   return (
     <Splide
       options={{
