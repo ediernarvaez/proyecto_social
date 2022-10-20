@@ -15,7 +15,7 @@ function Group() {
             <div className="col-span-1 flex justify-start p-8 relative">
               <span className="flex flex-col gap-7">
                 <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO UNO
+                  GRUPO 1
                 </p>
                 <span className="flex justify-start">
                   <Link to="/watchProjets">
@@ -44,7 +44,7 @@ function Group() {
             <div className="col-span-1 flex justify-start p-8 relative">
               <span className="flex flex-col gap-7">
                 <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO DOS
+                  GRUPO 2
                 </p>
                 <span className="flex justify-start">
                   <Link to="/watchProjets">
@@ -75,7 +75,7 @@ function Group() {
             <div className="col-span-1 flex justify-start p-8 relative">
               <span className="flex flex-col gap-7">
                 <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO TRES
+                  GRUPO 3
                 </p>
                 <span className="flex justify-start">
                   <Link to="/watchProjets">
@@ -104,7 +104,7 @@ function Group() {
             <div className="col-span-1 flex justify-start p-8 relative">
               <span className="flex flex-col gap-7">
                 <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO CUATRO
+                  GRUPO 4
                 </p>
                 <span className="flex justify-start">
                   <Link to="/watchProjets">
@@ -134,7 +134,7 @@ function Group() {
           <div className="col-span-1 flex justify-start p-8 relative">
             <span className="flex flex-col gap-7">
               <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                GRUPO QUINTO
+                GRUPO 5
               </p>
               <span className="flex justify-start">
                 <Link to="/watchProjets">
