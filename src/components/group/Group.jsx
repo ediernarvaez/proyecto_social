@@ -28,7 +28,7 @@ function Group() {
                   Haz click para ver el diseño
                 </h1>
                 <a
-                  href="https://www.figma.com/proto/ylATqJesgGS3tlWx5ddmxA/presentaci%C3%B3n?page-id=0%3A1&node-id=1%3A2&viewport=122%2C149%2C0.19&scaling=scale-down&starting-point-node-id=1%3A2"
+                  href="https://www.figma.com/proto/ylATqJesgGS3tlWx5ddmxA/Holandes_herrante?page-id=0%3A1&node-id=1%3A2&viewport=122%2C149%2C0.19&scaling=scale-down&starting-point-node-id=1%3A2"
                   target="_blank"
                   className="text-normal font-normal dark:text-indigo-400 text-blue-800 text-sm hover:underline"
                   rel="noreferrer"
