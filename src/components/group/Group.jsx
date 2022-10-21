@@ -11,7 +11,7 @@ function Group() {
 
   return (
     <section className="grid lg:justify-center">
-      <div className="bg-white dark:bg-zinc-900 bg-blue-300 rounded-lg shadow-md shadow-zinc-900 p-8 w-full lg:px-8 lg:w-[800px]">
+      <div className="dark:bg-zinc-900 bg-blue-300 rounded-lg shadow-md shadow-zinc-900 p-8 w-full lg:px-8 lg:w-[800px]">
         <h2 className="text-3xl font-black text-center text-white sm:text-4xl">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-amber-100">
             LISTA DE GRUPOS
