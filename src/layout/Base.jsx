@@ -10,7 +10,7 @@ import FormLinkPage from '../pages/FormLinkPage';
 
 function Base() {
   return (
-    <main className="bg-white dark:bg-zinc-800 pb-28 h-full">
+    <main className="bg-white dark:bg-zinc-800 lg:pb-28 lg:h-full">
       <Router>
         <Navbar />
         <Routes>

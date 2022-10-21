@@ -1,159 +1,153 @@
+/* eslint-disable jsx-a11y/media-has-caption */
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Link } from 'react-router-dom';
-import GroupIcon from '../assets/svg/GroupIcon';
 
 function Group() {
+  const img =
+    'https://cdni.iconscout.com/illustration/premium/thumb/meeting-5945294-4911442.png';
+
   return (
-    <section className="flex flex-col pt-20 bg-white dark:bg-zinc-800 px-16 gap-8">
-      <h1 className="flex text-zinc-800 dark:text-zinc-100 text-4xl capitalize font-bold justify-start">
-        Grupos
-      </h1>
-      <div className="grid grid-cols-6 gap-8">
-        <div className="col-span-3 rounded-md bg-yellow-100 dark:bg-zinc-700 bg-dark-200 shadow-lg">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1 flex justify-start p-8 relative">
-              <span className="flex flex-col gap-7">
-                <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO 1
-                </p>
-                <span className="flex justify-start">
-                  <Link to="/watchProjets">
-                    <button
-                      type="button"
-                      className="bg-sky-500 rounded-md px-10 py-2"
-                    >
-                      <h1 className="text-zinc-50 font-bold text-xs">
-                        Ver más
-                      </h1>
-                    </button>
-                  </Link>
-                </span>
+    <section className="grid lg:justify-center">
+      <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-md shadow-zinc-900 p-8 w-full lg:px-8 lg:w-[800px]">
+        <h2 className="text-3xl font-black text-center text-white sm:text-4xl">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-amber-100">
+            Lista de Grupos
+          </span>
+        </h2>
+        <div className="grid grid-cols-4 grid-rows-3 gap-8 justify-center pt-8">
+          <div className="col-span-4 lg:col-span-2 bg-zinc-800/40 rounded-lg">
+            <span className="flex flex-col lg:flex-row gap-2 items-start p-4 justify-between">
+              <span>
+                <h1 className="text-white font-bold text-xl">Grupo 1</h1>
+                <h1 className="text-normal font-normal text-white text-sm">
+                  Haz click para ver el diseño
+                </h1>
+                <a
+                  href="https://www.figma.com/proto/6TjeBmOPtaf0xTbPwcgpRE/proyecto_social?page-id=0%3A1&node-id=1%3A2&viewport=266%2C161%2C0.33&scaling=scale-down"
+                  target="_blank"
+                  className="text-normal font-normal text-indigo-400 text-sm hover:underline"
+                  rel="noreferrer"
+                >
+                  Ver diseño
+                </a>
               </span>
-            </div>
-            <div className="col-span-1 flex justify-end">
-              <GroupIcon
-                alt="Libros hasta un 30% off"
-                className="rounded-r-md object-cover mt-5"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="col-span-3 rounded-md bg-yellow-100 dark:bg-zinc-700 bg-dark-200 shadow-lg">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1 flex justify-start p-8 relative">
-              <span className="flex flex-col gap-7">
-                <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO 2
-                </p>
-                <span className="flex justify-start">
-                  <Link to="/watchProjets">
-                    <button
-                      type="button"
-                      className="bg-sky-500 rounded-md px-10 py-2"
-                    >
-                      <h1 className="text-zinc-50 font-bold text-xs">
-                        Ver más
-                      </h1>
-                    </button>
-                  </Link>
-                </span>
-              </span>
-            </div>
-            <div className="col-span-1 flex justify-end">
-              <GroupIcon
-                alt="Libros hasta un 30% off"
-                className="rounded-r-md object-cover mt-5"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-6 gap-8">
-        <div className="col-span-3 rounded-md bg-yellow-100 dark:bg-zinc-700 bg-dark-200 shadow-lg">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1 flex justify-start p-8 relative">
-              <span className="flex flex-col gap-7">
-                <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO 3
-                </p>
-                <span className="flex justify-start">
-                  <Link to="/watchProjets">
-                    <button
-                      type="button"
-                      className="bg-sky-500 rounded-md px-10 py-2"
-                    >
-                      <h1 className="text-zinc-50 font-bold text-xs">
-                        Ver más
-                      </h1>
-                    </button>
-                  </Link>
-                </span>
-              </span>
-            </div>
-            <div className="col-span-1 flex justify-end">
-              <GroupIcon
-                alt="Libros hasta un 30% off"
-                className="rounded-r-md object-cover mt-5"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="col-span-3 rounded-md bg-yellow-100 dark:bg-zinc-700 bg-dark-200 shadow-lg">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1 flex justify-start p-8 relative">
-              <span className="flex flex-col gap-7">
-                <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                  GRUPO 4
-                </p>
-                <span className="flex justify-start">
-                  <Link to="/watchProjets">
-                    <button
-                      type="button"
-                      className="bg-sky-500 rounded-md px-10 py-2"
-                    >
-                      <h1 className="text-zinc-50 font-bold text-xs">
-                        Ver más
-                      </h1>
-                    </button>
-                  </Link>
-                </span>
-              </span>
-            </div>
-            <div className="col-span-1 flex justify-end">
-              <GroupIcon
-                alt="Libros hasta un 30% off"
-                className="rounded-r-md object-cover mt-5"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mx-auto dark:bg-zinc-700 shadow-lg rounded-md p-4">
-        <div className="grid grid-cols-2">
-          <div className="col-span-1 flex justify-start p-8 relative">
-            <span className="flex flex-col gap-7">
-              <p className="text-zinc-900 uppercase tracking-widest dark:text-zinc-100 font-bold text-3xl pt-20">
-                GRUPO 5
-              </p>
-              <span className="flex justify-start">
-                <Link to="/watchProjets">
-                  <button
-                    type="button"
-                    className="bg-sky-500 rounded-md px-10 py-2"
-                  >
-                    <h1 className="text-zinc-50 font-bold text-xs">Ver más</h1>
-                  </button>
-                </Link>
+              <span>
+                <img
+                  src={img}
+                  alt="Meeting Illustration"
+                  loading="lazy"
+                  className="w-32 h-32 object-cover bg-white rounded-lg"
+                />
               </span>
             </span>
           </div>
-          <div className="col-span-1 flex justify-end">
-            <GroupIcon
-              alt="Libros hasta un 30% off"
-              className="rounded-r-md object-cover mt-5"
-            />
+          <div className="col-span-4 lg:col-span-2 bg-zinc-800/40 rounded-lg">
+            <span className="flex flex-col lg:flex-row gap-2 items-start p-4 justify-between">
+              <span>
+                <h1 className="text-white font-bold text-xl">Grupo 1</h1>
+                <h1 className="text-normal font-normal text-white text-sm">
+                  Haz click para ver el diseño
+                </h1>
+                <a
+                  href="https://www.figma.com/proto/6TjeBmOPtaf0xTbPwcgpRE/proyecto_social?page-id=0%3A1&node-id=1%3A2&viewport=266%2C161%2C0.33&scaling=scale-down"
+                  target="_blank"
+                  className="text-normal font-normal text-indigo-400 text-sm hover:underline"
+                  rel="noreferrer"
+                >
+                  Ver diseño
+                </a>
+              </span>
+              <span>
+                <img
+                  src={img}
+                  alt="Meeting Illustration"
+                  loading="lazy"
+                  className="w-32 h-32 object-cover bg-white rounded-lg"
+                />
+              </span>
+            </span>
           </div>
+          <div className="col-span-4 lg:col-span-2 bg-zinc-800/40 rounded-lg">
+            <span className="flex flex-col lg:flex-row gap-2 items-start p-4 justify-between">
+              <span>
+                <h1 className="text-white font-bold text-xl">Grupo 1</h1>
+                <h1 className="text-normal font-normal text-white text-sm">
+                  Haz click para ver el diseño
+                </h1>
+                <a
+                  href="https://www.figma.com/proto/6TjeBmOPtaf0xTbPwcgpRE/proyecto_social?page-id=0%3A1&node-id=1%3A2&viewport=266%2C161%2C0.33&scaling=scale-down"
+                  target="_blank"
+                  className="text-normal font-normal text-indigo-400 text-sm hover:underline"
+                  rel="noreferrer"
+                >
+                  Ver diseño
+                </a>
+              </span>
+              <span>
+                <img
+                  src={img}
+                  alt="Meeting Illustration"
+                  loading="lazy"
+                  className="w-32 h-32 object-cover bg-white rounded-lg"
+                />
+              </span>
+            </span>
+          </div>
+          <div className="col-span-4 lg:col-span-2 bg-zinc-800/40 rounded-lg">
+            <span className="flex flex-col lg:flex-row gap-2 items-start p-4 justify-between">
+              <span>
+                <h1 className="text-white font-bold text-xl">Grupo 1</h1>
+                <h1 className="text-normal font-normal text-white text-sm">
+                  Haz click para ver el diseño
+                </h1>
+                <a
+                  href="https://www.figma.com/proto/6TjeBmOPtaf0xTbPwcgpRE/proyecto_social?page-id=0%3A1&node-id=1%3A2&viewport=266%2C161%2C0.33&scaling=scale-down"
+                  target="_blank"
+                  className="text-normal font-normal text-indigo-400 text-sm hover:underline"
+                  rel="noreferrer"
+                >
+                  Ver diseño
+                </a>
+              </span>
+              <span>
+                <img
+                  src={img}
+                  alt="Meeting Illustration"
+                  loading="lazy"
+                  className="w-32 h-32 object-cover bg-white rounded-lg"
+                />
+              </span>
+            </span>
+          </div>
+          <div className="col-span-1 lg:block hidden" />
+          <div className="col-span-4 lg:col-span-2 bg-zinc-800/40 rounded-lg">
+            <span className="flex flex-col lg:flex-row gap-2 items-start p-4 justify-between">
+              <span>
+                <h1 className="text-white font-bold text-xl">Grupo 1</h1>
+                <h1 className="text-normal font-normal text-white text-sm">
+                  Haz click para ver el diseño
+                </h1>
+                <a
+                  href="https://www.figma.com/proto/6TjeBmOPtaf0xTbPwcgpRE/proyecto_social?page-id=0%3A1&node-id=1%3A2&viewport=266%2C161%2C0.33&scaling=scale-down"
+                  target="_blank"
+                  className="text-normal font-normal text-indigo-400 text-sm hover:underline"
+                  rel="noreferrer"
+                >
+                  Ver diseño
+                </a>
+              </span>
+              <span>
+                <img
+                  src={img}
+                  alt="Meeting Illustration"
+                  loading="lazy"
+                  className="w-32 h-32 object-cover bg-white rounded-lg"
+                />
+              </span>
+            </span>
+          </div>
+          <div className="col-span-1 lg:block hidden" />
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -7,6 +8,7 @@ import { supabase } from '../clients';
 
 function FormLinkPage() {
   const [figma, setFigma] = useState('');
+  const [group, setGrupo] = useState('');
 
   const grupos = [
     {
@@ -31,8 +33,6 @@ function FormLinkPage() {
     }
   ];
 
-  const [group, setGrupo] = useState('');
-
   const fetchResults = async () => {
     const { data, error } = await supabase
       .from('form_figma')
@@ -55,18 +55,18 @@ function FormLinkPage() {
             <label className="font-normal text-white text-md">
               Tipo de Proyecto:
             </label>
-            <select className="outline-none bg-zinc-800 text-white text-md rounded-md px-4 py-2 shadow-lg shadow-zinc-900/80">
+            <select
+              value={group}
+              onChange={(e) => {
+                setGrupo(e.target.value);
+              }}
+              className="outline-none bg-zinc-800 text-white text-md rounded-md px-4 py-2 shadow-lg shadow-zinc-900/80"
+            >
               <option disabled value="0">
                 Seleccione
               </option>
               {grupos.map((item, key) => (
-                <option
-                  key={item.id}
-                  value={item.nombre}
-                  onChange={(e) => {
-                    setGrupo(e.target.value);
-                  }}
-                >
+                <option key={key} value={item.id}>
                   {item.nombre}
                 </option>
               ))}
@@ -77,7 +77,7 @@ function FormLinkPage() {
               Link de Figma:
             </label>
             <input
-              type="text"
+              type="url"
               value={figma}
               onChange={(e) => setFigma(e.target.value)}
               placeholder="https://www.figma.com/file/6TjeBmO"
