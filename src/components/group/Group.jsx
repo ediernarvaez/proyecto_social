@@ -186,7 +186,7 @@ function Group() {
                   Haz click para ver el diseño
                 </h1>
                 <a
-                  href="#"
+                  href="https://www.figma.com/proto/6KKToiGzXDovk5WTYnbFIh/Untitled?node-id=1%3A2&scaling=contain&page-id=0%3A1"
                   target="_blank"
                   className="text-normal font-normal dark:text-indigo-400 text-blue-800 text-sm hover:underline"
                   rel="noreferrer"
