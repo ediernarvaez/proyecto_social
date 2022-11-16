@@ -15,12 +15,17 @@ function FormPage() {
   const [status, setStatus] = useState(true);
 
   const [type, setType] = useState('');
+  console.log(type);
   const [name, setName] = useState('');
+  console.log(name);
   const [figma, setFigma] = useState('');
+  console.log(figma);
   const [description, setDescription] = useState('');
+  console.log(description);
 
   const [input, setInput] = useState('');
   const [integrantes, setIntegrantes] = useState([]);
+  console.log(integrantes);
 
   const tipo = [
     {
@@ -59,7 +64,7 @@ function FormPage() {
           tipo_proyecto: type,
           nombre_proyecto: name,
           informacion: description,
-          integrante: test,
+          integrante: integrantes,
           link_figma: figma,
           imagen: image
         }
