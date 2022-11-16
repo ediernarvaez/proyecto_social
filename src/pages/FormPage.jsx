@@ -8,6 +8,7 @@ import FormImg from '../components/forms/FormImg';
 // import FormText from '../components/forms/FormText';
 import Hide from '../components/assets/svg/hide';
 import Group from '../components/assets/svg/group';
+import { supabase } from '../clients';
 
 function FormPage() {
   const [image, setImage] = useState(null);
@@ -36,6 +37,8 @@ function FormPage() {
     }
   ];
 
+  const test = 'fsfad';
+
   const clearImage = () => {
     setImage(null);
   };
@@ -48,6 +51,26 @@ function FormPage() {
     }
   }, [integrantes]);
 
+  const fetchResults = async () => {
+    const { data, error } = await supabase
+      .from('formulario')
+      .insert([
+        {
+          tipo_proyecto: type,
+          nombre_proyecto: name,
+          informacion: description,
+          integrante: test,
+          link_figma: figma,
+          imagen: image
+        }
+      ])
+      .then((res) => {
+        console.log(res);
+      });
+    if (error) console.log(error);
+    console.log(data);
+  };
+
   return (
     <section className="mx-auto lg:mx-[500px] bg-zinc-900 mt-12 rounded-lg shadow-lg shadow-zinc-900/80 mb-12">
       <div className="px-20 py-8 grid grid-cols-2 gap-8">
@@ -59,15 +82,16 @@ function FormPage() {
             <label className="font-normal text-white text-md">
               Tipo de Proyecto:
             </label>
-            <select className="outline-none bg-zinc-800 text-white text-md rounded-md px-4 py-2 shadow-lg shadow-zinc-900/80">
+            <select
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+              className="outline-none bg-zinc-800 text-white text-md rounded-md px-4 py-2 shadow-lg shadow-zinc-900/80"
+            >
               <option disabled value="0">
                 Seleccione
               </option>
               {tipo.map((item) => (
-                <option
-                  value={item.id}
-                  onChange={(e) => setType(e.target.value)}
-                >
+                <option key={item.id} value={item.name}>
                   {item.nombre}
                 </option>
               ))}
@@ -211,6 +235,9 @@ function FormPage() {
             className="bg-black px-8 py-3 text-white text-sm rounded-md shadow-md shadow-black/80"
             type="submit"
             text="Guardar Proyecto"
+            onClick={() => {
+              fetchResults();
+            }}
           />
         </span>
       </div>
