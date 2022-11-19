@@ -18,8 +18,8 @@ function FormPage() {
   console.log(type);
   const [name, setName] = useState('');
   console.log(name);
-  const [figma, setFigma] = useState('');
-  console.log(figma);
+  const [material, setMaterial] = useState('');
+  // console.log(figma);
   const [description, setDescription] = useState('');
   console.log(description);
 
@@ -30,11 +30,11 @@ function FormPage() {
   const tipo = [
     {
       id: 1,
-      nombre: 'Carro'
+      nombre: 'Barco'
     },
     {
       id: 2,
-      nombre: 'Barco'
+      nombre: 'Carro'
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ function FormPage() {
           nombre_proyecto: name,
           informacion: description,
           integrante: integrantes,
-          link_figma: figma,
+          materiales: material,
           imagen: image
         }
       ])
@@ -110,7 +110,7 @@ function FormPage() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder='Ej: "Holndes herrante"'
+              placeholder='Ej: "Nombre Del Carro"'
               className="outline-none bg-zinc-800 text-white text-md rounded-md px-4 py-2 shadow-lg shadow-zinc-900/80"
             />
           </span>
@@ -224,13 +224,13 @@ function FormPage() {
           </div>
           <span className="flex flex-col gap-2">
             <label className="font-normal text-white text-md">
-              Link de Figma:
+              Materiales:
             </label>
             <input
               type="text"
-              value={figma}
-              onChange={(e) => setFigma(e.target.value)}
-              placeholder="https://www.figma.com/file/6TjeBmO"
+              value={material}
+              onChange={(e) => setMaterial(e.target.value)}
+              placeholder="Descripcion De Materiales"
               className="outline-none bg-zinc-800 text-white text-md rounded-md px-4 py-2 shadow-lg shadow-zinc-900/80"
             />
           </span>
