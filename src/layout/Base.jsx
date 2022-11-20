@@ -7,6 +7,7 @@ import FormPage from '../pages/FormPage';
 import Footer from '../components/footer/Footer';
 import WatchProjets from '../pages/WatchProjets';
 import FormLinkPage from '../pages/FormLinkPage';
+import Results from '../components/vista/Results';
 
 function Base() {
   return (
@@ -22,6 +23,7 @@ function Base() {
           {/* watch projects */}
           <Route path="/watchProjets" element={<WatchProjets />} />
           <Route path="/linkFigma" element={<FormLinkPage />} />
+          <Route path="/vista" element={<Results />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
