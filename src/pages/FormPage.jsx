@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-console */
 /* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable no-unused-vars */
@@ -12,20 +13,22 @@ import { supabase } from '../clients';
 
 function FormPage() {
   const [image, setImage] = useState(null);
+  const [imageLoad, setImageLoad] = useState(null);
+  // console.log(image);
   const [status, setStatus] = useState(true);
 
   const [type, setType] = useState('');
-  console.log(type);
+  // console.log(type);
   const [name, setName] = useState('');
-  console.log(name);
+  // console.log(name);
   const [material, setMaterial] = useState('');
   // console.log(figma);
   const [description, setDescription] = useState('');
-  console.log(description);
+  // console.log(description);
 
   const [input, setInput] = useState('');
   const [integrantes, setIntegrantes] = useState([]);
-  console.log(integrantes);
+  // console.log(integrantes);
 
   const tipo = [
     {
@@ -43,6 +46,29 @@ function FormPage() {
   ];
 
   const test = 'fsfad';
+
+  const handleUpload = async (e) => {
+    let file;
+
+    if (e.target.files) {
+      file = e.target.files[0];
+      console.log(file);
+    }
+
+    const { data, error } = await supabase.storage
+      .from('imagenes')
+      .upload(`public/${file?.name}`, file, {
+        cacheControl: '3600',
+        upsert: false
+      });
+
+    if (data) {
+      console.log(data);
+      setImage(data.Key);
+    } else if (error) {
+      console.log(error);
+    }
+  };
 
   const clearImage = () => {
     setImage(null);
@@ -189,11 +215,11 @@ function FormPage() {
         <span className="col-span-1 flex flex-col gap-8">
           <div className="flex flex-col justify-start items-center col-span-1 gap-4">
             <span className="p-8 rounded-md bg-zinc-700/10 w-full h-56 border-2 border-zinc-700 border-dashed flex items-center justify-center">
-              {!image ? (
+              {!imageLoad ? (
                 <Hide className="fill-zinc-700" />
               ) : (
                 <img
-                  src={image}
+                  src={imageLoad}
                   alt="imagen"
                   className="w-full h-full object-cover rounded-md"
                 />
@@ -201,15 +227,16 @@ function FormPage() {
             </span>
             <span className="flex flex-col gap-4">
               <FormImg
-                onChange={(e) =>
-                  setImage(URL.createObjectURL(e.target.files[0]))
-                }
+                onChange={(e) => {
+                  handleUpload(e);
+                  setImageLoad(URL.createObjectURL(e.target.files[0]));
+                }}
                 type="file"
                 id="file"
                 className="flex flex-row gap-2 items-center fill-white text-white text-sm cursor-pointer bg-black p-2 rounded-md w-40 justify-center shadow-lg shadow-black"
                 text="Subir Imagen"
               />
-              {!image ? (
+              {!imageLoad ? (
                 <></>
               ) : (
                 <button
