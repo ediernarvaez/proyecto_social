@@ -12,8 +12,11 @@ function Results({ res, toggleOpen }) {
     <>
       <div className="flex justify-between items-start">
         <span className="flex flex-col gap-1">
+          <h1 className="text-white text-md font-extrabold capitalize">
+            TIPO DE PROYECTO:
+          </h1>
           <h1 className="text-white text-lg font-normal capitalize">
-            {res.nombre_proyecto}
+            {res.tipo_proyecto}
           </h1>
         </span>
         <button
@@ -26,11 +29,14 @@ function Results({ res, toggleOpen }) {
       </div>
       <div className="flex flex-col gap-2 mt-2">
         <span>
-          <h1 className="text-white text-md font-normal capitalize">
-            Tipo de Proyecto: {res.tipo_proyecto}
+          <h1 className="text-white text-md font-extrabold capitalize">
+            NOMBRE DE PROYECTO:
+            <h1 className="text-white text-md font-normal capitalize">
+              {res.nombre_proyecto}
+            </h1>
           </h1>
-          <h1 className="text-white text-md font-normal capitalize">
-            Integrantes:
+          <h1 className="text-white text-md font-extrabold capitalize">
+            INTEGRANTES:
           </h1>
           <h1 className="text-white/80 text-md font-normal capitalize">
             {/* {jsonTest} */}
@@ -47,9 +53,12 @@ function Results({ res, toggleOpen }) {
           />
         </span>
         <span>
+          <h1 className="text-white text-md font-extrabold capitalize">
+            INFORMACION:
+          </h1>
           <p className="text-white/80">{res.informacion}</p>
-          <h1 className="text-white text-md font-normal capitalize">
-            Materiales:
+          <h1 className="text-white text-md font-extrabold capitalize">
+            MATERIALES:
           </h1>
           <p className="text-white/80">{res.materiales}</p>
         </span>

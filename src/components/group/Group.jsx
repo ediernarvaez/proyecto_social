@@ -78,7 +78,7 @@ function Group() {
                     <button
                       type="button"
                       onClick={() => open(group.id)}
-                      className="bg-indigo-400 text-sm px-2 py-1 rounded-md text-white"
+                      className="bg-indigo-400  hover:bg-blue-500 hover:text-white  hover:border-transparent text-sm px-2 py-1 rounded-md text-white"
                     >
                       Abrir proyecto
                     </button>
