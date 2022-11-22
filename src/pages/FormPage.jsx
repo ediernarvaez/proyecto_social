@@ -253,11 +253,14 @@ function FormPage() {
             <label className="font-normal text-white text-md">
               Materiales:
             </label>
-            <input
-              type="text"
+            <textarea
+              style={{
+                resize: 'none'
+              }}
               value={material}
               onChange={(e) => setMaterial(e.target.value)}
               placeholder="Descripcion De Materiales"
+              rows="4"
               className="outline-none bg-zinc-800 text-white text-md rounded-md px-4 py-2 shadow-lg shadow-zinc-900/80"
             />
           </span>
