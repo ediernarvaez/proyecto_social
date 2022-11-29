@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 export const groups = [
   {
-    id: 38,
+    id: 39,
     nombre: 'Grupo 1',
     slug: 'grupo-1',
     figma:
@@ -34,7 +34,7 @@ export const groups = [
     ]
   },
   {
-    id: 39,
+    id: 40,
     nombre: 'Grupo 2',
     slug: 'grupo-2',
     figma:
@@ -63,7 +63,7 @@ export const groups = [
     ]
   },
   {
-    id: 40,
+    id: 41,
     nombre: 'Grupo 3',
     slug: 'grupo-3',
     figma:
@@ -88,7 +88,7 @@ export const groups = [
     ]
   },
   {
-    id: 41,
+    id: 42,
     nombre: 'Grupo 4',
     slug: 'grupo-4',
     figma:
@@ -121,7 +121,7 @@ export const groups = [
     ]
   },
   {
-    id: 42,
+    id: 43,
     nombre: 'Grupo 5',
     slug: 'grupo-5',
     figma:
